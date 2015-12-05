@@ -18,8 +18,15 @@
       <itemPath>controlflow.c</itemPath>
       <itemPath>execute.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>marquee.c</itemPath>
+      <itemPath>mycat.c</itemPath>
       <itemPath>myfind.c</itemPath>
+      <itemPath>myls1.c</itemPath>
+      <itemPath>myprog.c</itemPath>
+      <itemPath>mywho.c</itemPath>
+      <itemPath>mywrite.c</itemPath>
       <itemPath>pipe.c</itemPath>
+      <itemPath>prime.c</itemPath>
       <itemPath>process.c</itemPath>
       <itemPath>splitline.c</itemPath>
       <itemPath>varlib.c</itemPath>
@@ -54,9 +61,23 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="marquee.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mycat.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="myfind.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="myls1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="myprog.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mywho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mywrite.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="pipe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="prime.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="process.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -97,9 +118,23 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="marquee.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mycat.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="myfind.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="myls1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="myprog.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mywho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mywrite.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="pipe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="prime.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="process.c" ex="false" tool="0" flavor2="0">
       </item>

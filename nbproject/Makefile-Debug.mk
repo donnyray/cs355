@@ -39,8 +39,15 @@ OBJECTFILES= \
 	${OBJECTDIR}/controlflow.o \
 	${OBJECTDIR}/execute.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/marquee.o \
+	${OBJECTDIR}/mycat.o \
 	${OBJECTDIR}/myfind.o \
+	${OBJECTDIR}/myls1.o \
+	${OBJECTDIR}/myprog.o \
+	${OBJECTDIR}/mywho.o \
+	${OBJECTDIR}/mywrite.o \
 	${OBJECTDIR}/pipe.o \
+	${OBJECTDIR}/prime.o \
 	${OBJECTDIR}/process.o \
 	${OBJECTDIR}/splitline.o \
 	${OBJECTDIR}/varlib.o
@@ -90,15 +97,50 @@ ${OBJECTDIR}/main.o: main.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
+${OBJECTDIR}/marquee.o: marquee.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/marquee.o marquee.c
+
+${OBJECTDIR}/mycat.o: mycat.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mycat.o mycat.c
+
 ${OBJECTDIR}/myfind.o: myfind.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/myfind.o myfind.c
 
+${OBJECTDIR}/myls1.o: myls1.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/myls1.o myls1.c
+
+${OBJECTDIR}/myprog.o: myprog.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/myprog.o myprog.c
+
+${OBJECTDIR}/mywho.o: mywho.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mywho.o mywho.c
+
+${OBJECTDIR}/mywrite.o: mywrite.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mywrite.o mywrite.c
+
 ${OBJECTDIR}/pipe.o: pipe.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pipe.o pipe.c
+
+${OBJECTDIR}/prime.o: prime.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/prime.o prime.c
 
 ${OBJECTDIR}/process.o: process.c 
 	${MKDIR} -p ${OBJECTDIR}
