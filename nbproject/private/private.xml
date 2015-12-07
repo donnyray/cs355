@@ -7,11 +7,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/travismoretz/projects/CS355/myshell/varlib.c</file>
-            <file>file:/Users/travismoretz/projects/CS355/myshell/controlflow.c</file>
-            <file>file:/Users/travismoretz/projects/CS355/myshell/execute.c</file>
             <file>file:/Users/travismoretz/projects/CS355/myshell/main.c</file>
-            <file>file:/Users/travismoretz/projects/CS355/myshell/process.c</file>
             <file>file:/Users/travismoretz/projects/CS355/myshell/builtin.c</file>
         </group>
     </open-files>

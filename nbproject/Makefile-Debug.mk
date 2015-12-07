@@ -39,7 +39,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/controlflow.o \
 	${OBJECTDIR}/execute.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/marquee.o \
 	${OBJECTDIR}/mycat.o \
 	${OBJECTDIR}/myfind.o \
 	${OBJECTDIR}/myls1.o \
@@ -96,11 +95,6 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
-
-${OBJECTDIR}/marquee.o: marquee.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/marquee.o marquee.c
 
 ${OBJECTDIR}/mycat.o: mycat.c 
 	${MKDIR} -p ${OBJECTDIR}
