@@ -49,7 +49,7 @@ MKDIR=mkdir
 CP=cp
 CCADMIN=CCadmin
 CC=gcc
-DEPS= smsh.h varlib.h
+DEPS= dtm.h
 
-myshellmake: main.c varlib.c splitline.c process.c execute.c controlflow.c builtin.c pipe.c myfind.c
-	$(CC) -o myshell main.c varlib.c splitline.c process.c execute.c controlflow.c builtin.c pipe.c myfind.c
+myshellmake: main.c varlib.c splitline.c process.c execute.c controlflow.c builtin.c pipe.c myfind.c arguments.c prime.c myls1.c myprog.c mycat.c
+	$(CC) -o myshell main.c varlib.c splitline.c process.c execute.c controlflow.c builtin.c pipe.c myfind.c arguments.c prime.c myls1.c myprog.c mycat.c

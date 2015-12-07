@@ -1,27 +1,28 @@
 /* builtin.c
- * contains the switch and the functions for builtin commands
+ * 
+ * Author: Travis Moretz and code from book
+ *
+ * purpose: run a builtin command 
+ * returns: 1 if args[0] is builtin, 0 if not
+ * details: test args[0] against all known builtins.  Call functions
+ * as well as programs from througt out the semester.
+ * 
  */
 
 #include	<stdio.h>
 #include        <stdlib.h>
 #include	<string.h>
 #include	<ctype.h>
-#include	"smsh.h"
-#include	"varlib.h"
+#include	"dtm.h"
 
 int assign(char *);
 int okname(char *);
 int VLdelete(char *);
 int get_value(char*);
 int get_var(char*);
-int myfind(int, char**);
 
 int builtin_command(char **args, int *resultp)
-/*
- * purpose: run a builtin command 
- * returns: 1 if args[0] is builtin, 0 if not
- * details: test args[0] against all known builtins.  Call functions
- */
+
 {
 
 	int rv = 0;
@@ -31,12 +32,23 @@ int builtin_command(char **args, int *resultp)
 		*resultp = 0;
 		rv = 1;
 	}
-        else if (strcmp(args[0], "myfind") == 0) {
-            int count;
-            while(args++) {
-                count += 1;
-            }
-            myfind(count, args);
+        else if ( strcmp(args[0], "mycat") == 0) {
+            rv = mycat(getArgCount(), args);
+            
+        }
+        else if ( strcmp(args[0], "prime") == 0) {
+            /* TODO fork and close for prime */
+            rv = prime();
+        }
+        else if ( strcmp(args[0], "myprog") == 0) {
+            rv = myprog(getArgCount(), args);
+            printf("rv = %d\n", rv);
+        }
+        else if ( strcmp(args[0], "myls1") == 0) {
+            rv = myls1(getArgCount(), args);
+        }
+        else if ( strcmp(args[0], "myfind") == 0 ) {
+            rv = myfind(getArgCount(), args);
         }
 	else if ( strchr(args[0], '=') != NULL ){   /* assignment cmd */
 		*resultp = assign(args[0]);
@@ -71,19 +83,29 @@ int builtin_command(char **args, int *resultp)
 	return rv;
 }
 
+/**
+ * for $var function
+ * @param var
+ * @return 1 on success, 0 if not 
+ */
 int get_var( char * var) {
     int rv = 0;
     char *temp;
     
     if ( (temp = strsep(&var, REFVAR)) != NULL) {
                 printf("%s\n", VLlookup(var) );
-               
                 rv = 1;
             }
     
     return rv;
 }
 
+
+/**
+ * for setting var via read (stdin) 
+ * @param var
+ * @return 
+ */
 int get_value( char *var ) {
     int rv = 1;
     char *prompt = "= ";

@@ -21,7 +21,7 @@ void cntl_c(int);
 
 static int largest_prime = 0;
 
-int prime(int argc, char** argv) {
+int prime() {
     
     int i;
     save_restore_tty(0);            /* save tty settings */
@@ -49,7 +49,7 @@ int prime(int argc, char** argv) {
     }
     
     save_restore_tty(1);            /* restore tty settings */
-    return (EXIT_SUCCESS);
+    return (3);
 }
 
 /* handle when user tries interrupt the process */
@@ -67,7 +67,7 @@ void cntl_c(int signum) {
     /* Restore tty settings if interupted and exit */
     if (ch == 'y' || ch == 'Y') {
         save_restore_tty(1);
-        exit(1);
+        exit(3);
     }
 
 }

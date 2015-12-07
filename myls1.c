@@ -36,7 +36,7 @@ int myls1(int ac, char *av[])
          do_ls(av[i]);
          break;
       }
-   return 0;
+   return 1;
 }
 
 void do_ls(char dirname[])

@@ -36,7 +36,7 @@ int mywho(int argc, char** argv) {
         show_info(&current_record);
     }
     close(utmpfd);
-    return 0; /* went okay */
+    return 3; /* went okay */
 
 }
 

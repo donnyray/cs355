@@ -1,5 +1,5 @@
 #include	<stdio.h>
-#include	"smsh.h"
+#include	"dtm.h"
 
 /* process2.c   - version 2 - supports builtins
  * command processing layer
@@ -30,8 +30,9 @@ int process(char **args)
 		rv = 0;
 	else if ( is_control_command(args[0]) )
 		rv = do_control_command(args);
-	else if ( ok_to_execute() )
+	else if ( ok_to_execute() ) {
 		if ( !builtin_command(args,&rv) )
 			rv = execute(args);
+        }
 	return rv;
 }

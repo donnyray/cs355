@@ -8,7 +8,7 @@
 #include	<stdio.h>
 #include	<stdlib.h>
 #include	<string.h>
-#include	"smsh.h"
+#include	"dtm.h"
 
 char * next_cmd(char *prompt, FILE *fp)
 /*
@@ -101,6 +101,9 @@ char ** splitline(char *line)
 		args[argnum++] = newstr(start, len);
 	}
 	args[argnum] = NULL;
+        
+        /* set argument count in arguments.c */
+        setArgCount(argnum);
 	return args;
 }
 

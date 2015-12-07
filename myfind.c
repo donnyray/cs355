@@ -28,7 +28,7 @@ int is_direc(char * );
  * 
  */
 int myfind(int argc, char** argv) {
-    
+    printf("In myfind\n");
     /* test for proper args input*/
     if( argc < 2) {
         perror("Error");
@@ -44,7 +44,7 @@ int myfind(int argc, char** argv) {
     } /* if no directory was specified start in current */
     else
        compare_names(argv[1], ".");
-    return (EXIT_SUCCESS);
+    return (1);
 }
 
 /**

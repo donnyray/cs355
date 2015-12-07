@@ -4,8 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>smsh.h</itemPath>
-      <itemPath>varlib.h</itemPath>
+      <itemPath>dtm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,6 +13,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>arguments.c</itemPath>
       <itemPath>builtin.c</itemPath>
       <itemPath>controlflow.c</itemPath>
       <itemPath>execute.c</itemPath>
@@ -52,9 +52,13 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="arguments.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="builtin.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="controlflow.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="dtm.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="execute.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -78,13 +82,9 @@
       </item>
       <item path="process.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="smsh.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="splitline.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="varlib.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="varlib.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -107,9 +107,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="arguments.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="builtin.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="controlflow.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="dtm.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="execute.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -133,13 +137,9 @@
       </item>
       <item path="process.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="smsh.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="splitline.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="varlib.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="varlib.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

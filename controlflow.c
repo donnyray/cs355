@@ -1,11 +1,11 @@
 /* controlflow.c
- *
+ *  Author: Book and Travis Moretz
  * "if" processing is done with two state variables
  *    if_state and if_result
  */
 #include	<stdio.h>
 #include        <string.h>
-#include	"smsh.h"
+#include	"dtm.h"
 
 enum states   { NEUTRAL, WANT_THEN, THEN_BLOCK };
 enum results  { SUCCESS, FAIL };
@@ -76,6 +76,7 @@ int do_control_command(char **args)
 			rv = 0;
 		}
 	}
+        /* TODO add ELSE THEN block*/
 	else if ( strcmp(cmd,"fi")==0 ){
 		if ( if_state != THEN_BLOCK )
 			rv = syn_err("fi unexpected");

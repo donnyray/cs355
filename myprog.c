@@ -22,7 +22,7 @@ int myprog(int argc, char** argv) {
         print_param(argv[i], size); 
     }
 
-    return (EXIT_SUCCESS);
+    return (3);
 }
 
 /*  This function will take a char array and int value indicating the length

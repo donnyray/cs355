@@ -1,6 +1,12 @@
+/* 
 
-/* varlib.c
- *
+
+
+ * File: varlib.c
+ * Authors: (Editied by) Travis Moretz & Code added to project from book(BruceMoley) 
+ * 
+ * 
+ *  
  * a simple storage system to store name=value pairs
  * with facility to mark items as part of the environment
  *
@@ -8,7 +14,8 @@
  *     VLstore( name, value )    returns 1 for 0k, 0 for no
  *     VLlookup( name )          returns string or NULL if not there
  *     VLlist()			 prints out current table
- *
+ *     VLdelete()                returns 1 for ok, 0 for no 
+ *      
  * environment-related functions
  *     VLexport( name )		 adds name to list of env vars
  *     VLtable2environ()	 copy from table to environ
@@ -25,7 +32,6 @@
 
 #include	<stdio.h>
 #include	<stdlib.h>
-#include	"varlib.h"
 #include	<string.h>
 
 #define	MAXVARS	200		/* a linked list would be nicer */
@@ -129,6 +135,7 @@ int VLexport( char *name )
 }
 
 static struct var * find_item( char *name , int first_blank )
+
 /*
  * searches table for an item
  * returns ptr to struct or NULL if not found

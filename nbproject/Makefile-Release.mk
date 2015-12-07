@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/arguments.o \
 	${OBJECTDIR}/builtin.o \
 	${OBJECTDIR}/controlflow.o \
 	${OBJECTDIR}/execute.o \
@@ -75,6 +76,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/myshell: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/myshell ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/arguments.o: arguments.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/arguments.o arguments.c
 
 ${OBJECTDIR}/builtin.o: builtin.c 
 	${MKDIR} -p ${OBJECTDIR}

@@ -2,14 +2,9 @@
  * File:   main.c
  *  travismoretz
  *
- * Created on November 28, 2015, 9:32 AM
+ * Created on November 20, 2015, 9:32 AM
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <signal.h>
 
 /** smsh2.c - small-shell version 2
  **		small shell that supports command line parsing
@@ -18,9 +13,10 @@
 #include	<stdio.h>
 #include	<stdlib.h>
 #include	<unistd.h>
+#include        <string.h>
 #include	<signal.h>
 #include	<sys/wait.h>
-#include	"smsh.h"
+#include	"dtm.h"
 
 #define	DFL_PROMPT	"> "
 int VLenviron2table(char *env[]);

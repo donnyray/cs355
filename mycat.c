@@ -121,6 +121,7 @@ int mycat(int argc, char** argv) {
                     while( (ch = read(fd, buff, sizeof(char)))) {
                        printf("%s", buff); 
                     }
+                    putchar('\n');
                         
                 }
             }
@@ -128,5 +129,5 @@ int mycat(int argc, char** argv) {
         }
         
     }
-        return(EXIT_SUCCESS);
+        return(3);
 }
