@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+echo "Good Morning!!"; echo "This came from a script"; echo "add some variables to shell"
+dog=Riddick
+cat=BuddyCat
+
+#some food to eat
+drink=Manhattan; food=steak
+set
+
+
+
